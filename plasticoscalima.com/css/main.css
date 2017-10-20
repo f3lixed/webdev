@@ -9,31 +9,31 @@
 /*** Percentage ***/
 /*** TEAM ***/
 /*** PAGE ABOUT ***/
-/*** PRICING TABLE ***/           
+/*** PRICING TABLE ***/
 /*** second price table ***/
 /*** third price table ***/
 /*** PAGE SERVICES ***/
 /*** PAGE FAQ ***/
 /*** PAGE BLOG ***/
-/*** PAGE CONTACT ***/  
-/*** PAGE HOME 2 ***/  
-/*** PAGE HOME 3 ***/ 
-/*** PAGE HOME 4 ***/        
+/*** PAGE CONTACT ***/
+/*** PAGE HOME 2 ***/
+/*** PAGE HOME 3 ***/
+/*** PAGE HOME 4 ***/
 /*** PAGE HOME 5 ***/
-/*** PAGE ABOUT 2 ***/    
-/*** PAGE ABOUT 3 ***/  
+/*** PAGE ABOUT 2 ***/
+/*** PAGE ABOUT 3 ***/
 /*** PAGE ABOUT 4 ***/
 /*** PAGE MEET TEAM ***/
-/*** PAGE SHOPPING GENERAL OBJECT ***/ 
+/*** PAGE SHOPPING GENERAL OBJECT ***/
 /*** PAGE SHOPPING DRESSES ***/
 /*** PAGE SINGLE PRODUCT ***/
-/*** PAGE SINGLE PRODUCT DRESSES ***/ 
+/*** PAGE SINGLE PRODUCT DRESSES ***/
 /*** PAGE CART PRODUCT ***/
-/*** Footer Styles ***/   
+/*** Footer Styles ***/
 /*** Footer-2 ***/
 /*** Footer-3 ***/
-/*** Footer-4 ***/ 
-/*** PAGE 404 NOT FOUND ***/            
+/*** Footer-4 ***/
+/*** PAGE 404 NOT FOUND ***/
 
 
 
@@ -105,9 +105,9 @@ h4 {
   left: 0;
 }
 
- 
+
  /*Preload*/
- 
+
 #loader-wrapper {
     position: fixed;
     top: 0;
@@ -147,7 +147,7 @@ h4 {
     -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
- 
+
 #loader:after {
     content: "";
     position: absolute;
@@ -161,7 +161,7 @@ h4 {
     -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
       animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
 }
- 
+
 @-webkit-keyframes spin {
     0%   {
         -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
@@ -186,7 +186,7 @@ h4 {
         transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
     }
 }
-    
+
 
 /*Scroll*/
 .dropdown-prod-cart-scroll {
@@ -226,15 +226,15 @@ ul.scroll-menu {
 ::-webkit-scrollbar {
     width: 12px;
 }
- 
+
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
 }
- 
+
 ::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 /********/
 
@@ -337,8 +337,8 @@ p.personal-phrase i.fa-quote-left{
     text-shadow: 0 1px 0 rgba(0,0,0,.1);
 }
 /*.btn-primary:hover {
-    background: #16a7a7;  
-    border: 1px solid #09b1b9; 
+    background: #16a7a7;
+    border: 1px solid #09b1b9;
 }*/
 .btn-lg, .btn-group-lg>.btn {
 	border-radius: 0px;
@@ -358,7 +358,7 @@ p.personal-phrase i.fa-quote-left{
 	z-index: 8888;
 }
 .navbarcart-content {
-	
+
 }
 .navbar-inverse .navbar-nav>li>a {
 	color: #212121;
@@ -484,7 +484,7 @@ ul.menu-items li.menu-item:last-child {
 	pointer-events:none;
 	opacity:0;
 }
-.hero-imacretina-1 {   
+.hero-imacretina-1 {
     background-repeat:no-repeat;
     background-size: 200px 142px;
 	background-image:url("../images/monitor1.jpg");
@@ -583,7 +583,7 @@ ul.menu-items li.menu-item:last-child {
 	border-bottom: 0px solid #11c1c1;
 	box-shadow: 0 1px 15px rgba(0,0,0,.2);
 	float: left;
-	
+
 }
 #menu2 .navbar-nav>li>.dropdown-menu {
     padding: 0;
@@ -596,11 +596,11 @@ ul.menu-items li.menu-item:last-child {
 	background: #1d2026;
 }
 #menu2 .vertical-li li {
-	background: #1d2026;	
+	background: #1d2026;
 	border-bottom: 1px solid #262c33;
 }
 #menu2 .vertical-li li:hover {
-	background: #262a30;	
+	background: #262a30;
 }
 #menu2 .vertical-li li:hover a{
 	color: #11c1c1;
@@ -612,7 +612,7 @@ ul.menu-items li.menu-item:last-child {
 	border-right: 1px solid #262a30;
 }
 #menu2 .dropdown-menu>li>a:hover, #menu2 .dropdown-menu>li>a:focus {
-	
+
 }
 #menu2 .dropdown-menu li a:hover {
 	background-color:transparent;
@@ -643,13 +643,13 @@ ul.menu-items li.menu-item:last-child {
 	color: #11c1c1;
 }
 #menu2 .hero-imacretina-1 {
-    background-image: url("../images/monitor1.png");   
+    background-image: url("../images/monitor1.png");
 }
 #menu2 .hero-imacretina-2 {
-    background-image: url("../images/monitor2.png");   
+    background-image: url("../images/monitor2.png");
 }
 #menu2 .hero-imacretina-3 {
-    background-image: url("../images/monitor3.png");   
+    background-image: url("../images/monitor3.png");
 }
 
 
@@ -746,7 +746,7 @@ ul.menu-items li.menu-item:last-child {
 	background-color: #999999;
 }
 #goToCheckOut {
-	
+
 	background-color: #666666;
     color: #ffffff;
     clear: both;
@@ -1118,7 +1118,7 @@ a.close-overlay.hidden {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
 	background-position:0 0 !important;
-	background-attachment: fixed;    
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1146,7 +1146,7 @@ a.close-overlay.hidden {
     background: rgba(0,0,0,0.6);
     padding: 60px 0 40px 0;
 }
-.slide-inner-txt h3 {	
+.slide-inner-txt h3 {
     font-size: 86px;
     z-index: 99999;
     text-align: right;
@@ -1249,7 +1249,7 @@ h2.home-middle-parallax {
     left: 0;
     bottom: 0;
     right: 0;
-    
+
 }
 .section-colored {
     background-color: #21252b;
@@ -1346,7 +1346,7 @@ ul.clients li img{
 	background-repeat:no-repeat !important;
 	background-position: 50% 134px;
 	background-position:0 0 !important;
-	background-attachment: fixed;    
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1744,7 +1744,7 @@ figure.effect-hera:hover p i:empty {
 }
 
 
-/* Social Icons Styles */  
+/* Social Icons Styles */
 .about2-team .list-inline>li.tooltip-social {
 	position: relative;
 	padding-right: 0;
@@ -1755,7 +1755,7 @@ figure.effect-hera:hover p i:empty {
     margin-top: 20px;
 }
 .tooltip-social a {
-    text-decoration: none; 
+    text-decoration: none;
     border-radius: 2px;
     color: #fff;
     padding: 5px 0;
@@ -1839,10 +1839,10 @@ figure.effect-hera:hover p i:empty {
 .city-bg {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	width: 100%;	
+	width: 100%;
 	position: relative;
 	background-repeat:no-repeat !important;
-	background-attachment: fixed;    
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1855,13 +1855,13 @@ figure.effect-hera:hover p i:empty {
 	margin-top: 0px;
 }
 /********************************************************************************************
- PAGE ABOUT                                                                                                 
+ PAGE ABOUT
 *********************************************************************************************/
 
 .about-top-img {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	background-attachment: fixed;    
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1923,7 +1923,7 @@ h2.t-title-office.office2 {
 	padding: 17px 0px;
 	margin-bottom: 80px;
 	border-bottom: 1px solid #e6eaea;
-	
+
 }
 .breadcrumb {
 	border-radius: 2px;
@@ -1989,19 +1989,19 @@ h2.t-title-office.office2 {
 	margin-top: 0px;
 }
 /********************************************************************************************
- PRICING TABLE                                                                                                 
+ PRICING TABLE
 *********************************************************************************************/
 canvas {
     margin: 0;
     padding: 0;
-    z-index: 999;   
+    z-index: 999;
     width: 100%;
     position: absolute;
 }
 .pricing-top-img {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	background-attachment: fixed;    
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -2106,14 +2106,14 @@ canvas {
     padding: 32px 0;
     width: 45%;
     text-align: center;
-    margin: 0 auto;	
+    margin: 0 auto;
 }
 .third-price .panel-title {
 	font-size: 32px;
 }
 
 /********************************************************************************************
- PAGE SERVICES                                                                                                 
+ PAGE SERVICES
 *********************************************************************************************/
 .services-top-img {
     background-image: url('http://placehold.it/1920x1080');
@@ -2203,7 +2203,7 @@ canvas {
 .services-box h4.white {
     color: #fff;
     text-transform: uppercase;
-} 
+}
 .services-box p {
 	color: #fff;
 }
@@ -2240,13 +2240,13 @@ canvas {
 }
 
 /********************************************************************************************
- PAGE FAQ                                                                                                
+ PAGE FAQ
 *********************************************************************************************/
 
 .faq-top-img {
-    background-color: #111;   
+    background-color: #111;
     width: 100%;
-    height: 450px;    
+    height: 450px;
     position: relative;
 }
 .effect-over-hand {
@@ -2311,12 +2311,12 @@ canvas {
 }
 
 /********************************************************************************************
-    PAGE BLOG                                                                                                 
+    PAGE BLOG
 *********************************************************************************************/
 .blog-top-img {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	background-attachment: fixed;    
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -2365,12 +2365,12 @@ canvas {
 }
 
 /********************************************************************************************
-    PAGE BLOG RIGHT                                                                                              
+    PAGE BLOG RIGHT
 *********************************************************************************************/
 .blog-top-img {
 	background-image:url(http://placehold.it/1920x1080);
 	background-repeat:no-repeat !important;
-	background-attachment: fixed;    
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -2462,7 +2462,7 @@ canvas {
 .tags {
     list-style-type: none;
     padding: 0;
-    
+
 }
 .tags li {
 	padding:5px 15px;
@@ -2479,7 +2479,7 @@ canvas {
 }
 .blog-info-prod .blog-r-title {
 	margin-top: 10px;
-	
+
 }
 .blog-info-prod .blog-r-title a {
 	color:#333;
@@ -2515,7 +2515,7 @@ canvas {
 }
 
 /********************************************************************************************
-    PAGE BLOG POST                                                                                              
+    PAGE BLOG POST
 *********************************************************************************************/
 
 .blog-post-right-col .well {
@@ -2527,7 +2527,7 @@ canvas {
     text-transform: uppercase;
 }
 /********************************************************************************************
-    PAGE CONTACT                                                                                                 
+    PAGE CONTACT
 *********************************************************************************************/
 
 .breadcrumb-contact {
@@ -2589,13 +2589,13 @@ canvas {
 #contact-form .error{display:none;}
 
 .mapgoogle {
-	width:100%; 
-	height:400px; 
+	width:100%;
+	height:400px;
 	border: 0px;
 }
 
 /********************************************************************************************
-    PAGE HOME 2                                                                                                 
+    PAGE HOME 2
 *********************************************************************************************/
 .page-header-title.home2-title {
 	margin: 0px 0 20px;
@@ -2642,7 +2642,7 @@ canvas {
    position: relative;
    text-align: center;
    cursor: default;
-   
+
 }
 .view .mask,.view .content {
    position: absolute;
@@ -2818,7 +2818,7 @@ canvas {
    -ms-transition-delay: 0.5s;
    transition-delay: 0.5s;
 }
-				
+
 
 /*End */
 
@@ -2847,8 +2847,8 @@ canvas {
 .home2-city-bg {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	width: 100%;	
-	background-attachment: fixed;    
+	width: 100%;
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -2890,7 +2890,7 @@ canvas {
 .flex-control-thumbs li {
     width: 12%;
     margin: 0 10px 0 0;
-    
+
 }
 #infoCompany-home2 {
 padding: 80px 0 80px 0;
@@ -2924,7 +2924,7 @@ padding: 80px 0 80px 0;
 }
 
 /********************************************************************************************
-    PAGE HOME 3                                                                                                 
+    PAGE HOME 3
 *********************************************************************************************/
 
 .home3-percentage {
@@ -2977,8 +2977,8 @@ padding: 80px 0 80px 0;
 }
 .home3-city-bg {
 	background-color:#0cc7c7;
-	width: 100%;	
-	position: relative;	
+	width: 100%;
+	position: relative;
 }
 .home3-city-bg p{
 	color: rgba(255,255,255,1);
@@ -3013,7 +3013,7 @@ padding: 80px 0 80px 0;
 }
 .bt-serv {
 	width: 100%;
-	float: left;	
+	float: left;
 }
 .home3-city-bg .txt-circle-content.first-ic {
 	margin: 60px 0 0px 0;
@@ -3044,8 +3044,8 @@ padding: 80px 0 80px 0;
 .home3-bt-footer-bg {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	width: 100%;	
-	background-attachment: fixed;    
+	width: 100%;
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -3146,9 +3146,9 @@ padding: 80px 0 80px 0;
 .filter li { display: inline-block; list-style: none; margin-right:5px;}
 .filter li:last-child:after { content: ""; }
 .filter li  {
-    padding: 5px 15px; 
-    color: #8e8e8e; 
-    text-decoration: none; 
+    padding: 5px 15px;
+    color: #8e8e8e;
+    text-decoration: none;
     border:1px solid #dedede;
     -webkit-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out;
@@ -3230,7 +3230,7 @@ padding: 80px 0 80px 0;
 
 
 /********************************************************************************************
-    PAGE HOME 4                                                                                                 
+    PAGE HOME 4
 *********************************************************************************************/
 
 .slide-banner {
@@ -3251,9 +3251,9 @@ padding: 80px 0 80px 0;
 	padding: 20px 36px;
 	color: #212121!important;
 	text-transform: uppercase;
-	 -webkit-box-shadow: inset 0 0 0 #0fc8c8; 
+	 -webkit-box-shadow: inset 0 0 0 #0fc8c8;
     -moz-box-shadow: inset 0 0 0 #0fc8c8;
-     box-shadow: inset 0 0 0 #0fc8c8; 
+     box-shadow: inset 0 0 0 #0fc8c8;
 }
 .slide-banner .btn-primary:hover {
 	color: #fff!important;
@@ -3274,7 +3274,7 @@ padding: 80px 0 80px 0;
 }
 .home4-percentage .fact-icon {
 	background: #0cc7c7;
-	border-radius: 2px;	
+	border-radius: 2px;
     border-color: #0299a9 #0cc7c7 #0cc7c7 #0cc7c7;
     border-style: solid;
     border-width: 60px 60px 60px 60px;
@@ -3421,11 +3421,11 @@ padding: 80px 0 80px 0;
 	border: 1px solid #0cc7c7;
 }
 #product .lents-images-zoom .title {
-	color: #111;	
+	color: #111;
 	text-transform: uppercase;
 	font-size: 14px;
 	padding: 7px 12px;
-    background: #fff;	
+    background: #fff;
     font-weight: 400;
 }
 /**Team**/
@@ -3443,7 +3443,7 @@ padding: 80px 0 80px 0;
 #clients-home4 .team-img .content p:first-child{
 	color:#212121;
 }
-#clients-home4.parallax-texture {	
+#clients-home4.parallax-texture {
 	background-image: url('http://placehold.it/1920x1080');
     background-repeat: no-repeat !important;
     background-attachment: fixed;
@@ -3511,8 +3511,8 @@ padding: 80px 0 80px 0;
 .home4-city-bg {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	width: 100%;	
-	background-attachment: fixed;    
+	width: 100%;
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -3522,12 +3522,12 @@ padding: 80px 0 80px 0;
 	padding: 80px 20px 90px 20px;
 }
 .home4-city-bg .row-box {
-     background-color: rgba(255,255,255,0); 
-     padding: 0; 
-     border-top: 0px solid #0cc7c7; 
-     border-left: 0px solid #fff; 
-     border-right: 0px solid #fff; 
-     border-bottom: 0px solid #fff; 
+     background-color: rgba(255,255,255,0);
+     padding: 0;
+     border-top: 0px solid #0cc7c7;
+     border-left: 0px solid #fff;
+     border-right: 0px solid #fff;
+     border-bottom: 0px solid #fff;
 }
 .home4-city-bg .well{
 	background: rgba(0,0,0,0.5);
@@ -3542,8 +3542,8 @@ padding: 80px 0 80px 0;
 
 /*Portfolio Animation*/
 
-.my-gallery-animation.ng-enter, 
-.my-gallery-animation.ng-leave { 
+.my-gallery-animation.ng-enter,
+.my-gallery-animation.ng-leave {
     -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
@@ -3551,7 +3551,7 @@ padding: 80px 0 80px 0;
     transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     position: relative;
     display: block;
-} 
+}
 
 .my-gallery-animation.ng-leave.ng-leave-active,
 .my-gallery-animation.ng-enter {
@@ -3562,7 +3562,7 @@ padding: 80px 0 80px 0;
     transform: rotateX(-180deg) translatez(30px);
     opacity: 0;
     height: 0px;
-}        
+}
 
 .my-gallery-animation.ng-enter.ng-enter-active,
 .my-gallery-animation.ng-leave {
@@ -3595,7 +3595,7 @@ padding: 80px 0 80px 0;
 }
 #infoCompany-home4 .testimon-desc p.nm-name {
 	font-size: 14px;
-	color: #fff;	
+	color: #fff;
 }
 #infoCompany-home4 .testimon-desc p span {
 	color: #07ccd4;
@@ -3641,7 +3641,7 @@ padding: 80px 0 80px 0;
 }
 
 /********************************************************************************************
-    PAGE HOME 5                                                                                                 
+    PAGE HOME 5
 *********************************************************************************************/
 
 .home5-percentage {
@@ -3679,6 +3679,7 @@ padding: 80px 0 80px 0;
     padding: 0 15px 15px;
     border: 1px #E6E6E6 solid;
     width: 100%;
+    height: 320px;
 }
 .home5-percentage .angula-box-5:hover .fact-icon{
 	background: #0cc7c7;
@@ -3691,6 +3692,7 @@ padding: 80px 0 80px 0;
 	overflow: hidden;
     border-bottom: 1px #eee solid;
     padding-bottom: 25px !important;
+    height: 170px;
 }
 .home5-percentage .angula-box-5 a.btn{
 	margin: 15px auto 0;
@@ -3754,7 +3756,7 @@ padding: 80px 0 80px 0;
 .home5-portfolio .activegrid ul li:hover .folio-desc {
 	opacity: 1;
 }
-.hero-index-1 {   
+.hero-index-1 {
     background-repeat:no-repeat;
     background-size: 100% 100%;
 	background-image:url("../images/monitor1.jpg");
@@ -3796,9 +3798,9 @@ padding: 80px 0 80px 0;
 .home5-city-bg {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	width: 100%;	
-	position: relative;	
-	background-attachment: fixed;    
+	width: 100%;
+	position: relative;
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -4066,8 +4068,8 @@ to {
 .home5-city-bg-bottom {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	width: 100%;	
-	background-attachment: fixed;    
+	width: 100%;
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -4077,12 +4079,12 @@ to {
 	padding: 30px 0px 40px 0px;
 }
 .home5-city-bg-bottom .row-box {
-     background-color: rgba(255,255,255,0); 
-     padding: 0; 
-     border-top: 0px solid #0cc7c7; 
-     border-left: 0px solid #fff; 
-     border-right: 0px solid #fff; 
-     border-bottom: 0px solid #fff; 
+     background-color: rgba(255,255,255,0);
+     padding: 0;
+     border-top: 0px solid #0cc7c7;
+     border-left: 0px solid #fff;
+     border-right: 0px solid #fff;
+     border-bottom: 0px solid #fff;
 }
 .home5-city-bg-bottom .well{
 	background: rgba(0,0,0,0.8);
@@ -4152,8 +4154,8 @@ to {
 
 /*Portfolio Animation*/
 
-.my-gallery-animation-home5.ng-enter, 
-.my-gallery-animation-home5.ng-leave { 
+.my-gallery-animation-home5.ng-enter,
+.my-gallery-animation-home5.ng-leave {
     -webkit-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     -moz-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     -ms-transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
@@ -4161,7 +4163,7 @@ to {
     transition: 400ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     position: relative;
     display: block;
-} 
+}
 
 .my-gallery-animation-home5.ng-leave.ng-leave-active,
 .my-gallery-animation-home5.ng-enter {
@@ -4171,7 +4173,7 @@ to {
     -o-transform: rotateX(-180deg) translatez(30px);
     transform: rotateX(-180deg) translatez(30px);
     opacity: 0;
-}        
+}
 
 .my-gallery-animation-home5.ng-enter.ng-enter-active,
 .my-gallery-animation-home5.ng-leave {
@@ -4282,7 +4284,7 @@ to {
     z-index: 2;
 }
 /********************************************************************************************
-    PAGE ABOUT 2                                                                                                 
+    PAGE ABOUT 2
 *********************************************************************************************/
 .about2-top-title .color-txt{
 	color: #0cc7c7;
@@ -4313,7 +4315,7 @@ to {
 .about2-top-img {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	background-attachment: fixed;    
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -4493,12 +4495,12 @@ to {
     transform: translateX(0);
 }
 /********************************************************************************************
-    PAGE ABOUT 3                                                                                                 
+    PAGE ABOUT 3
 *********************************************************************************************/
 .about3-top-img {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	background-attachment: fixed;    
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -4737,12 +4739,12 @@ to {
 }
 
 /********************************************************************************************
-    PAGE ABOUT 4                                                                                                 
+    PAGE ABOUT 4
 *********************************************************************************************/
 .about4-top-img {
 	background-image:url('http://placehold.it/1920x1080');
 	background-repeat:no-repeat !important;
-	background-attachment: fixed;    
+	background-attachment: fixed;
 	-webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -4973,7 +4975,7 @@ to {
 	color:#fff;
 	padding: 2px 6px;
     background:#0cc7c7;
-    border-radius:100%; 
+    border-radius:100%;
     margin-right: 10px;
 }
 .about-pg-4 ul {
@@ -5003,7 +5005,7 @@ to {
 }
 
 /********************************************************************************************
-    PAGE MEET TEAM                                                                                                 
+    PAGE MEET TEAM
 *********************************************************************************************/
 .about-top-imgmeet {
 	background-image: url('http://placehold.it/1920x1080');
@@ -5055,7 +5057,7 @@ to {
 }
 
 /********************************************************************************************
-    PAGE SHOPPING GENERAL OBJECT                                                                                           
+    PAGE SHOPPING GENERAL OBJECT
 *********************************************************************************************/
 .search-query {
 	padding: 4px;
@@ -5193,11 +5195,11 @@ to {
     margin-bottom:20px;
     -webkit-transition: all 0.5s ease-out;  /* Chrome 1-25, Safari 3.2+ */
      -moz-transition: all 0.5s ease-out;  /* Firefox 4-15 */
-       -o-transition: all 0.5s ease-out;  /* Opera 10.50–12.00 */
+       -o-transition: all 0.5s ease-out;  /* Opera 10.50ï¿½12.00 */
           transition: all 0.5s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
-          
+
     }
-.shop-prod.activegrid ul li :hover img {	
+.shop-prod.activegrid ul li :hover img {
           box-shadow: 0 20px 22px #888;
 }
 
@@ -5216,7 +5218,7 @@ to {
 	margin-bottom: 0px;
      -webkit-transition: all 0.6s ease-out;  /* Chrome 1-25, Safari 3.2+ */
      -moz-transition: all 0.6s ease-out;  /* Firefox 4-15 */
-       -o-transition: all 0.6s ease-out;  /* Opera 10.50–12.00 */
+       -o-transition: all 0.6s ease-out;  /* Opera 10.50ï¿½12.00 */
           transition: all 0.6s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 .onsale-prod {
@@ -5244,7 +5246,7 @@ to {
     margin: 0 auto;
     opacity: 0;
     filter: alpha(opacity=0);
-    
+
 }
 .shop-img .fade:hover {
     filter: alpha(opacity=100);
@@ -5348,8 +5350,8 @@ to {
 	padding: 0 10px;
 }
 
-.my-shop-animation.ng-enter, 
-.my-shop-animation.ng-leave { 
+.my-shop-animation.ng-enter,
+.my-shop-animation.ng-leave {
     -webkit-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     -moz-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     -ms-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
@@ -5357,7 +5359,7 @@ to {
     transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
     position: relative;
     display: block;
-} 
+}
 
 .my-shop-animation.ng-leave.ng-leave-active,
 .my-shop-animation.ng-enter {
@@ -5367,7 +5369,7 @@ to {
     -o-transform: scale(0);
     transform: scale(0);
     opacity: 0;
-}        
+}
 
 .my-shop-animation.ng-enter.ng-enter-active,
 .my-shop-animation.ng-leave {
@@ -5559,7 +5561,7 @@ figure.effect-layla:hover img {
 }
 
 /********************************************************************************************
-    PAGE SHOPPING DRESSES                                                                                         
+    PAGE SHOPPING DRESSES
 *********************************************************************************************/
 .shop-slide-img {
     background-image: url('http://placehold.it/1920x1080');
@@ -5635,9 +5637,9 @@ figure.effect-layla:hover img {
 .filter-dresses li { display: inline-block; list-style: none; margin-right:5px;}
 .filter-dresses li:last-child:after { content: ""; }
 .filter-dresses li  {
-    padding: 5px 15px; 
-    color: #8e8e8e; 
-    text-decoration: none; 
+    padding: 5px 15px;
+    color: #8e8e8e;
+    text-decoration: none;
     border-bottom:1px solid #dedede;
     }
 .filter-dresses li:hover, .current li { color: #111; border-bottom:1px solid #111;cursor:pointer;}
@@ -5666,37 +5668,37 @@ figure.effect-layla:hover img {
 	font-weight: 400;
 	margin-right: 10px;
 	font-family: 'Open sans',sans-serif;
-	
-}
-.radio-chose input[type=radio] {  
-    display: none;  
-}  
-.radio-chose label:before {  
-    border-radius: 8px;  
-} 
 
-.radio-chose label:before {  
-    content: "";  
-    display: inline-block;  
-  
-    width: 16px;  
-    height: 16px;  
-  
-    margin-right: 10px;  
-    position: absolute;  
-    left: 0;  
-    bottombottom: 1px;  
-    background-color: #aaa;  
-    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);  
-}  
-.radio-chose label {  
-    display: inline-block;  
-    cursor: pointer;  
-    position: relative;  
-    padding-left: 25px;  
-    margin-right: 15px;  
-    font-size: 13px;  
-}  
+}
+.radio-chose input[type=radio] {
+    display: none;
+}
+.radio-chose label:before {
+    border-radius: 8px;
+}
+
+.radio-chose label:before {
+    content: "";
+    display: inline-block;
+
+    width: 16px;
+    height: 16px;
+
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottombottom: 1px;
+    background-color: #aaa;
+    box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+}
+.radio-chose label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;
+    font-size: 13px;
+}
 input[type=radio]:checked + label:before {
     content: "\2022";
     color: #f3f3f3;
@@ -5706,7 +5708,7 @@ input[type=radio]:checked + label:before {
 }
 
 /********************************************************************************************
-    PAGE SHOPPING DRESSES RIGHT COLUMN                                                                                       
+    PAGE SHOPPING DRESSES RIGHT COLUMN
 *********************************************************************************************/
 
 #shop-dresses-rc .shop-prod ul.albumContainer li {
@@ -5812,20 +5814,20 @@ input[type=radio]:checked + label:before {
 	padding-right: 0px;
 }
 /********************************************************************************************
-    PAGE SHOPPING DRESSES LEFT COLUMN                                                                                       
+    PAGE SHOPPING DRESSES LEFT COLUMN
 *********************************************************************************************/
 
 .dresses-left-column {
 	float: right;
 }
 /********************************************************************************************
-    PAGE SINGLE PRODUCT                                                                                                
+    PAGE SINGLE PRODUCT
 *********************************************************************************************/
 
 .shop-banner-details {
 	position: relative;
 	padding: 0 0 50px 0;
-	background: #111;	
+	background: #111;
 }
 .shop-banner-back {
 	background-image: url('../images/slider_old.jpg');
@@ -5936,7 +5938,7 @@ input[type=radio]:checked + label:before {
 }
 
 /********************************************************************************************
-    PAGE SINGLE PRODUCT DRESSES                                                                                               
+    PAGE SINGLE PRODUCT DRESSES
 *********************************************************************************************/
 #product_dresses .single-prod-info .product-name-title {
 	font-size: 18px;
@@ -5965,9 +5967,9 @@ input[type=radio]:checked + label:before {
 .btn-primary.bt-back {
 	background: #313131;
     border: 1px solid #333;
-    -webkit-box-shadow: inset 0 0px 0 #0fc8c8; 
+    -webkit-box-shadow: inset 0 0px 0 #0fc8c8;
     -moz-box-shadow: inset 0 0px 0 #0fc8c8;
-     box-shadow: inset 0 0px 0 #0fc8c8; 
+     box-shadow: inset 0 0px 0 #0fc8c8;
 }
 
 .btn-primary.bt-back:after {
@@ -6052,7 +6054,7 @@ input[type=radio]:checked + label:before {
 }
 
 /********************************************************************************************
-    PAGE CART PRODUCT                                                                                               
+    PAGE CART PRODUCT
 *********************************************************************************************/
 .shoppingpack img {
     padding-top: 40px;
@@ -6097,7 +6099,7 @@ input[type=radio]:checked + label:before {
 	margin-bottom: 30px;
 }
 .text-info {
-	color:#6e6e6e;	
+	color:#6e6e6e;
 }
 .btn-primary.bt-plus-prod {
 	height: 31px;
@@ -6164,9 +6166,9 @@ input[type=radio]:checked + label:before {
 .btn-primary.cart-clear-all {
 	background: #313131;
     border: 1px solid #313131;
-    -webkit-box-shadow: inset 0 0px 0 #0fc8c8; 
+    -webkit-box-shadow: inset 0 0px 0 #0fc8c8;
     -moz-box-shadow: inset 0 0px 0 #0fc8c8;
-     box-shadow: inset 0 0px 0 #0fc8c8; 
+     box-shadow: inset 0 0px 0 #0fc8c8;
 }
 
 .btn-primary.cart-clear-all:after {
@@ -6183,7 +6185,7 @@ input[type=radio]:checked + label:before {
 
 
 /********************************************************************************************
- Footer Styles                                                                                                 
+ Footer Styles
 *********************************************************************************************/
 
 .row-footer {
@@ -6199,7 +6201,7 @@ input[type=radio]:checked + label:before {
 }
 footer {
     background-color: #21252b;
-    border-top: 1px solid #2e343a;   
+    border-top: 1px solid #2e343a;
     margin-top: 0px;
     position: relative;
 }
@@ -6264,7 +6266,7 @@ footer .tags a:hover {
 
 
 /********************************************************************************************
- Footer-2 Sponsor Styles                                                                                                 
+ Footer-2 Sponsor Styles
 *********************************************************************************************/
 .footer-title-step {
 	margin-top: 80px;
@@ -6304,7 +6306,7 @@ footer#footer_sponsor .top-footer-in{
 }
 
 /********************************************************************************************
- Footer-3 Two Color                                                                                                
+ Footer-3 Two Color
 *********************************************************************************************/
 .twocolor .logofooter img {
 	margin-top: -10px;
@@ -6366,7 +6368,7 @@ footer#footer_sponsor .top-footer-in{
 	color:#fff;
 	-webkit-transition: all 0.6s ease-out;  /* Chrome 1-25, Safari 3.2+ */
      -moz-transition: all 0.6s ease-out;  /* Firefox 4-15 */
-       -o-transition: all 0.6s ease-out;  /* Opera 10.50–12.00 */
+       -o-transition: all 0.6s ease-out;  /* Opera 10.50ï¿½12.00 */
           transition: all 0.6s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 .box-content-1 .arrow_box_page p, .box-content-2 .arrow_box_page p {
@@ -6377,21 +6379,21 @@ footer#footer_sponsor .top-footer-in{
 	color:#fff;
 	-webkit-transition: all 0.6s ease-out;  /* Chrome 1-25, Safari 3.2+ */
      -moz-transition: all 0.6s ease-out;  /* Firefox 4-15 */
-       -o-transition: all 0.6s ease-out;  /* Opera 10.50–12.00 */
+       -o-transition: all 0.6s ease-out;  /* Opera 10.50ï¿½12.00 */
           transition: all 0.6s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 .box-content-1 .arrow_box_page:after {
 	border-right-color: #07ccd4;
 	-webkit-transition: all 0.6s ease-out;  /* Chrome 1-25, Safari 3.2+ */
      -moz-transition: all 0.6s ease-out;  /* Firefox 4-15 */
-       -o-transition: all 0.6s ease-out;  /* Opera 10.50–12.00 */
+       -o-transition: all 0.6s ease-out;  /* Opera 10.50ï¿½12.00 */
           transition: all 0.6s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 .box-content-2 .arrow_box_page:after {
 	border-right-color: #282d33;
 	-webkit-transition: all 0.6s ease-out;  /* Chrome 1-25, Safari 3.2+ */
      -moz-transition: all 0.6s ease-out;  /* Firefox 4-15 */
-       -o-transition: all 0.6s ease-out;  /* Opera 10.50–12.00 */
+       -o-transition: all 0.6s ease-out;  /* Opera 10.50ï¿½12.00 */
           transition: all 0.6s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 .bf-content h1 {
@@ -6413,7 +6415,7 @@ footer#footer_sponsor .top-footer-in{
 }
 
 /********************************************************************************************
- Footer-4 Two Color                                                                                                
+ Footer-4 Two Color
 *********************************************************************************************/
 
 .footer-bacground {
@@ -6441,7 +6443,7 @@ footer .tags-img a:hover {
 }
 
 /********************************************************************************************
- Footer-4 Two Color                                                                                                
+ Footer-4 Two Color
 *********************************************************************************************/
 
 .twocolor4 p {
@@ -6480,7 +6482,7 @@ footer .tags4 a:hover {
 
 
 /********************************************************************************************
-  PAGE 404 NOT FOUND                                                                                               
+  PAGE 404 NOT FOUND
 *********************************************************************************************/
 
 .page-nofound .error-404 {
@@ -6494,7 +6496,7 @@ footer .tags4 a:hover {
     color: #f4f4f4;
     line-height: 1.846;
     margin-bottom: 60px;
-    text-shadow: 0 1px 0 #ccc, 
+    text-shadow: 0 1px 0 #ccc,
                0 2px 0 #c9c9c9,
                0 3px 0 #bbb,
                0 4px 0 #b9b9b9,
@@ -6852,7 +6854,3 @@ you can use the generic selector below, but it's slower:
 .icon-dribbble:before {
 	content: "\e063";
 }
-
-
-
-
