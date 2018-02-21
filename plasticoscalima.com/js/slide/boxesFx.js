@@ -4,12 +4,12 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
 ;( function( window ) {
-	
+
 	'use strict';
 
 	// based on http://responsejs.com/labs/dimensions/
@@ -23,7 +23,7 @@
 			client = docElem['clientHeight'];
 			inner = window['innerHeight'];
 		}
-		
+
 		return client < inner ? inner : client;
 	}
 
@@ -38,9 +38,9 @@
 		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
 		support = { transitions : Modernizr.csstransitions },
 		win = { width : getViewport('x'), height : getViewport('y') };
-	
+
 	function extend( a, b ) {
-		for( var key in b ) { 
+		for( var key in b ) {
 			if( b.hasOwnProperty( key ) ) {
 				a[key] = b[key];
 			}
@@ -48,7 +48,7 @@
 		return a;
 	}
 
-	function BoxesFx( el, options ) {	
+	function BoxesFx( el, options ) {
 		this.el = el;
 		this.options = extend( {}, this.options );
 		extend( this.options, options );
@@ -136,7 +136,7 @@
 					'translate3d(0,-' + (win.height/2+10) + 'px, 0)'
 				]
 			}
-		};	
+		};
 	}
 
 	BoxesFx.prototype._initEvents = function() {
@@ -145,6 +145,7 @@
 		navctrls[0].addEventListener( 'click', function() { self._navigate('prev') } );
 		// next action
 		navctrls[1].addEventListener( 'click', function() { self._navigate('next') } );
+
 		// window resize
 		window.addEventListener( 'resize', function() { self._resizeHandler(); } );
 	}
@@ -153,11 +154,11 @@
 	BoxesFx.prototype._navigate = function( dir ) {
 		if( this.isAnimating ) return false;
 		this.isAnimating = true;
-        
+
 		var self = this, currentPanel = this.panels[ this.current ];
 
 		if( dir === 'next' ) {
-			this.current = this.current < this.panelsCount - 1 ? this.current + 1 : 0;			
+			this.current = this.current < this.panelsCount - 1 ? this.current + 1 : 0;
 		}
 		else {
 			this.current = this.current > 0 ? this.current - 1 : this.panelsCount - 1;
@@ -172,7 +173,7 @@
 
 		// let´s track the number of transitions ended per panel
 		var cntTransTotal = 0,
-			
+
 			// transition end event function
 			onEndTransitionFn = function( ev ) {
 				if( ev && !classie.has( ev.target, 'bg-img' ) ) return false;
@@ -217,13 +218,13 @@
 			tile.style.transform = 'none';
 		} );
 	}
-//    var interval = null;
-//        $(function(){
-//            interval = setInterval(callFunc, 5000);
-//        });
-//        function callFunc(){
-//            $(".next").trigger("click");
-//        }
+   var interval = null;
+       $(function(){
+           interval = setInterval(callFunc, 5000);
+       });
+       function callFunc(){
+           $(".next").trigger("click");
+       }
 	BoxesFx.prototype._resizeHandler = function() {
 		var self = this;
 		function delayed() {

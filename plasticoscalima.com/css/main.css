@@ -4619,7 +4619,7 @@ to {
 }
 #percentage-about3.parallax-texture {
 	padding: 80px 0 100px 0;
-    background-image: url('../images/top1920x1080-7.jpg');
+    background-color: #cccccc;
     background-repeat: repeat !important;
     background-attachment: fixed;
     width: 100%;
