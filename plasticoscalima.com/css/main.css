@@ -344,6 +344,9 @@ p.personal-phrase i.fa-quote-left{
 	border-radius: 0px;
 }
 /****************  MENU    ************/
+.menu-principal{
+    font-size: 16px;
+}
 .navbar-brand {
 	font-weight: 700;
 	padding: 1px 15px;
@@ -351,7 +354,7 @@ p.personal-phrase i.fa-quote-left{
 .navbar-inverse {
 	background-image:none;
 	background-color: #fff;
-	height: 70px;
+	height: 100px;
 	border-bottom: 3px solid #0d70b4;
 	box-shadow: 0 1px 15px rgba(0,0,0,.2);
 	float: left;
@@ -375,7 +378,7 @@ p.personal-phrase i.fa-quote-left{
 }
 .navbar-collapse {
 	position: relative;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
 ul.menu-items li.menu-item {
