@@ -3919,8 +3919,58 @@ to {
     background-position: 0 1850px,  0 600px;
 }
 }
+.logo-s{
+  left: -1000px;
+}
+.logo-d{
+  position: relative;
+    left: -280px;
+    opacity: 0;
 
+}
+.effectopacity-logo{
+    position: relative;
+    -webkit-animation-name: effecto-left-logo;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
+    animation-name: effecto-left-logo;
+    animation-duration: 3s;    
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+.effectopacity-logo-up{
+    position: relative;
+    -webkit-animation-name: effecto-up-logo;  /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
+    animation-name: effecto-up-logo;
+    animation-duration: 3s;    
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+@keyframes effecto-left-logo {
+    from {left: -50em;}
+    to {left: 8em;}
+}
+@keyframes effecto-up-logo {
+    from {top: 22.5em;}
+    to {top: 0em; opacity: 1;}
+}
+@-webkit-keyframes effecto-left-logo {
+    from {left: -50em;}
+    to {left: 8em;}
+}
+@-webkit-keyframes effecto-up-logo {
+    from {top: 22.5em;}
+    to {top: 0em; opacity: 1;}
+}
 
+#map {
+        height: 100%;
+        width: 100%;
+      }
 .lents-images-zoom {
 	position: absolute;
     z-index: 999;

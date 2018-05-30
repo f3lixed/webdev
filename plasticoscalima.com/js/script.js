@@ -220,6 +220,8 @@ $(document).ready(function ($) {
             if ($('#html5service').length > 0) {
                 if (scrollPos > $('#html5service').offset().top) {
                     $('.effect-diagonal').addClass('effectopacity');
+                    $('.effect-left').addClass('effectopacity-logo');
+                    $('.effect-up').addClass('effectopacity-logo-up');
                 }
             }
 
@@ -237,7 +239,7 @@ $(window).load(function () {
    try {
     var $container = $('.albumContainer');
     $container.isotope({
-        filter: '*',
+        filter: '.cat3',
         animationOptions: {
             duration: 750,
             easing: 'linear',
