@@ -6540,6 +6540,14 @@ footer .tags4 a:hover {
 	display:inline-block;
 }
 
+p.texto_descripcion {
+    color: #fff;
+    margin: 150px 50px 60px 40px;
+}
+p.texto_descripcion_2 {
+    color: #fff;
+    margin: 230px 50px 60px 40px;
+}
 /* Use the following CSS code if you want to have a class per icon */
 /*
 Instead of a list of all class selectors,
