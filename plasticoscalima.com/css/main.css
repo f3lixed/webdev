@@ -115,8 +115,9 @@ h4 {
     width: 100%;
     height: 100%;
     z-index: 1000;
-    background: #fff;
+    /* background: #fff; */
     z-index: 9999;
+    display: none;
 }
 
 #loader {
@@ -3931,22 +3932,22 @@ to {
 .effectopacity-logo{
     position: relative;
     -webkit-animation-name: effecto-left-logo;  /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */
     -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
     -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
     animation-name: effecto-left-logo;
-    animation-duration: 3s;    
+    animation-duration: 3s;
     animation-delay: 2s;
     animation-fill-mode: both;
 }
 .effectopacity-logo-up{
     position: relative;
     -webkit-animation-name: effecto-up-logo;  /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */    
+    -webkit-animation-duration: 3s;  /* Safari 4.0 - 8.0 */
     -webkit-animation-delay: 2s; /* Safari 4.0 - 8.0 */
     -webkit-animation-fill-mode: both; /* Safari 4.0 - 8.0 */
     animation-name: effecto-up-logo;
-    animation-duration: 3s;    
+    animation-duration: 3s;
     animation-delay: 2s;
     animation-fill-mode: both;
 }

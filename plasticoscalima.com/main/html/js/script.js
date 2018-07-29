@@ -3,15 +3,15 @@ $(document).ready(function ($) {
     /*************************************************************
     Preload
     *************************************************************/
-    $(function preview() {
-        "use strict";
-        try {
-            var myTimer = 0; clearTimeout(myTimer);
-            myTimer = setTimeout(function () { $("#loader-wrapper").slideUp() }, 2000);
-
-        } catch (err) {
-        }
-    });
+    // $(function preview() {
+    //     "use strict";
+    //     try {
+    //         var myTimer = 0; clearTimeout(myTimer);
+    //         myTimer = setTimeout(function () { $("#loader-wrapper").slideUp() }, 2000);
+    //
+    //     } catch (err) {
+    //     }
+    // });
 
 
     /*************************************************************

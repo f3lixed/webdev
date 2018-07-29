@@ -3,15 +3,15 @@ $(document).ready(function ($) {
     /*************************************************************
     Preload
     *************************************************************/
-    $(function preview() {
-        "use strict";
-        try {
-            var myTimer = 0; clearTimeout(myTimer);
-            myTimer = setTimeout(function () { $("#loader-wrapper").slideUp() }, 2000);
-
-        } catch (err) {
-        }
-    });
+    // $(function preview() {
+    //     "use strict";
+    //     try {
+    //         var myTimer = 0; clearTimeout(myTimer);
+    //         myTimer = setTimeout(function () { $("#loader-wrapper").slideUp() }, 2000);
+    //
+    //     } catch (err) {
+    //     }
+    // });
 
 
     /*************************************************************
@@ -103,7 +103,7 @@ $(document).ready(function ($) {
             singleItem: true,
             autoPlay: true
             // "singleItem:true" is a shortcut for:
-            // items : 1, 
+            // items : 1,
             // itemsDesktop : false,
             // itemsDesktopSmall : false,
             // itemsTablet: false,
@@ -262,8 +262,3 @@ $(window).load(function () {
     } catch (err) {
     }
 });
-
-
-
-
-
