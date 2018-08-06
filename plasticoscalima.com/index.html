@@ -14,7 +14,7 @@
     <meta charset="utf-8">
     <meta name="description" content="AngularJs, html5, store, shopping, siteweb, cart">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="google-site-verification" content="PZOL1FqQ_O3y1Teh7A8MVga7VFBfOPV-H1UQhF8CUbY" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.min.css"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
@@ -43,7 +43,61 @@
     <link href="css/responsive.css" rel="stylesheet" type="text/css" />
 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script>
+// var onloadCallback = function() {
+//     grecaptcha.render('html_element', {
+//       'sitekey' : '6LfiomgUAAAAAAahq2Ni2OLFsxDB95bNFV8S8BnJ',
+//       'callback' : correctCaptcha
+//     });
+//   };
+//   var correctCaptcha = function(response) {
+//     alert(response);
+//   };
+function validateForm()
+{
+  var v = grecaptcha.getResponse();
+  console.log(v.length);
+  var respCaptcha = false;
+  if(v.length == 0)
+  {
+      document.getElementById('captcha').innerHTML="No puedes dejar el código Captcha vacío";
+      respCaptcha = false;
+  }
+  else
+  {
+      document.getElementById('captcha').innerHTML="Captcha completada";
+      respCaptcha = true;
+  }
 
+  if (respCaptcha) {
+    $.ajax({
+        method: "POST",
+        url: "mail.php",
+        data: { input1: $("#input1").val(), input2: $("#input2").val(), input3: $("#input3").val(), input4: $("#input4").val(), input5: $("#input5").val() },
+        beforeSend: function( xhr ) {
+          // $("#loader-wrapper").show();
+          $("#loader-wrapper").slideDown();
+        }
+      }).done(function( data ) {
+        if ( console && console.log ) {
+          var response = JSON.parse(data);
+          $("#loader-wrapper").slideUp();
+
+          // swal(response.result, response.msj, response.resultType);
+          swal({
+            title: response.result,
+            text: response.msj,
+            icon: response.resultType,
+          })
+          .then((willDelete) => {
+            location.reload();
+          });
+        }
+      });
+  }
+}
+</script>
 </head>
 <body>
   <div id="loader-wrapper">
@@ -675,7 +729,7 @@ Para enfrentar esto, utilizamos polímeros biodegradables, para evitar el daño 
 
             <p class="contact-sub-txt">Deja tus datos para contactarnos proximamente contigo. <br />Aclararemos todas tus dudas asignandote un asesor.</p>
 
-            <form id="contact-form" role="form" method="POST" action="#">
+            <form id="contact-form" role="form" method="POST" action="javascript:validateForm();">
                 <div class="row">
                     <div class="form-group col-lg-6">
                         <label for="input1">Nombre *</label>
@@ -688,7 +742,7 @@ Para enfrentar esto, utilizamos polímeros biodegradables, para evitar el daño 
                     <div class="clearfix"></div>
                     <div class="form-group col-lg-6">
                         <label for="input2">Email *</label>
-                        <input type="email" name="contact_email" placeholder="e.g. mail@example.com" class="form-control" id="input2">
+                        <input type="email" name="contact_email" placeholder="e.g. mail@example.com" class="form-control" id="input2" required>
                     </div>
                     <div class="form-group col-lg-6">
                         <label for="input3">Numero Telefonico (Celular o fijo)</label>
@@ -699,12 +753,15 @@ Para enfrentar esto, utilizamos polímeros biodegradables, para evitar el daño 
                         <label for="input4">Mensaje</label>
                         <textarea name="contact_message" class="form-control" rows="6" id="input4"></textarea>
                     </div>
+
                     <div class="form-group col-lg-12">
                         <input type="hidden" name="save" value="contact">
-                        <button type="button" id="enviarContacto" class="btn btn-primary bt-contact-submit">Enviar</button>
+                        <button type="submit" id="enviarContacto" class="btn btn-primary bt-contact-submit">Enviar</button>
                         <p class="success">Su mensaje ha sido enviado con éxito.</p>
                         <p class="error">Correo electrónico debe ser válido y mensaje debe ser superior a 20 caracteres.</p>
                     </div>
+                    <div class="g-recaptcha" id="rcaptcha" style="margin-left: 90px;" data-sitekey="6LfiomgUAAAAAAahq2Ni2OLFsxDB95bNFV8S8BnJ"></div>
+                    <span id="captcha" style="margin-left:400px;color:red" />
                 </div>
             </form>
         </div>
@@ -879,25 +936,25 @@ $(document).ready(function () {
       $(this).removeClass("hover");
     });
   });
-  $("#enviarContacto").click(function(){
+  // $("#enviarContacto").click(function(){
 
-      $.ajax({
-          method: "POST",
-          url: "mail.php",
-          data: { input1: $("#input1").val(), input2: $("#input2").val(), input3: $("#input3").val(), input4: $("#input4").val(), input5: $("#input5").val() },
-          beforeSend: function( xhr ) {
-            // $("#loader-wrapper").show();
-            $("#loader-wrapper").slideDown();
-          }
-        }).done(function( data ) {
-          if ( console && console.log ) {
-            var response = JSON.parse(data);
-            $("#loader-wrapper").slideUp();
-
-            swal(response.result, response.msj, response.resultType);
-          }
-        });
-  });
+      // $.ajax({
+      //     method: "POST",
+      //     url: "mail.php",
+      //     data: { input1: $("#input1").val(), input2: $("#input2").val(), input3: $("#input3").val(), input4: $("#input4").val(), input5: $("#input5").val() },
+      //     beforeSend: function( xhr ) {
+      //       // $("#loader-wrapper").show();
+      //       $("#loader-wrapper").slideDown();
+      //     }
+      //   }).done(function( data ) {
+      //     if ( console && console.log ) {
+      //       var response = JSON.parse(data);
+      //       $("#loader-wrapper").slideUp();
+      //
+      //       swal(response.result, response.msj, response.resultType);
+      //     }
+      //   });
+  // });
 });
 </script>
 <script src="js/nav.js" type="text/javascript"></script>
