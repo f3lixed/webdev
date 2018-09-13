@@ -1,0 +1,450 @@
+<?php
+
+namespace App\Http\Controllers\Estudios;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Estudios\estudios;
+use App\Estudios\estudioGalpones;
+use App\Estudios\EstudioGrupoVariable;
+use App\Estudios\estudioGalponEndividuos;
+use App\Estudios\EstudioIndividuoVariable;
+use App\Variable;
+use App\parametrizacion\galpon;
+use App\EstudioGalponResultados;
+
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Input;
+use Storage;
+use Session;
+use App\parametrizacion\empresa;
+
+class EstudioIndividuoVariableController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+
+    public function ListGalponesIndividuos($id){
+
+        $galponeEstudio = estudioGalpones::with('estudios','animal','empresa','granja','linea','galpon')->where('estudio_galpon_id', $id)->first();
+        $galpon = galpon::where('galpone_id', $galponeEstudio->fk_galpone_id)->first();
+        $individuos = estudioGalponEndividuos::with('animal','granja')->where('fk_estudio_galpon_id',$id)->get();
+        $resultados = false;
+        $Boolean = false;
+        $accionComletado = false;
+
+        ///  valido si todo lo del estudio en la tabla individuos variables esta como estado completado
+        //$valores = new EstudioIndividuoVariable();
+
+        if(count($individuos) > 0){
+
+            $resultados = EstudioIndividuoVariable::where([
+                    'fk_estudio_galpon_id' => $individuos[0]->fk_estudio_galpon_id,
+                    'fk_estudio_id' => $individuos[0]->fk_estudio_id,
+                    'estado' => 0
+                ])
+                ->exists();
+
+            $individuosRN = EstudioGalponResultados::where([
+                    'fk_estudio_galpon_id' => $individuos[0]->fk_estudio_galpon_id,
+                    'fk_estudio_id' => $individuos[0]->fk_estudio_id,
+                ])
+                ->exists();
+        }
+
+        if ($resultados) {
+            
+            $accionComletado = true;
+        }
+
+        if ($individuosRN) {
+            
+            $Boolean = true;
+        }
+        
+        return view('individuos.index',[
+            'name' => $galpon->sistema_produccion,
+            'individuos' => $individuos,
+            'galponEstudio' => $galponeEstudio,
+            'accionComletado' => $accionComletado,
+            'Boolean' => $Boolean
+        ]);
+    }
+
+    public function ListGalponesIndividuosVariables($galponID, $id){
+
+        $galponeEstudio = estudioGalpones::with('estudios','animal','empresa','granja','linea','galpon')->where('estudio_galpon_id', $galponID)->first();
+        $galpon = galpon::where('galpone_id', $galponeEstudio->fk_galpone_id)->first();
+
+        $individuos = EstudioIndividuoVariable::with('animal','granja','Variable')
+            ->where('fk_estudio_galpon_id', $galponID)
+            ->where('fk_individio_id', $id)
+            ->get();
+
+        $paginateIndividuos = EstudioIndividuoVariable::with('animal','granja','Variable')
+            ->where('fk_estudio_galpon_id', $galponID)
+            ->where('fk_individio_id', $id)
+            ->paginate(1);
+
+        return view('individuos.variables',[
+            'name' => $galpon->sistema_produccion,
+            'individuos' => $individuos,
+            'galponEstudio' => $galponeEstudio,
+            'paginateIndividuos' => $paginateIndividuos
+        ]);
+    }
+
+    public function UpdateIndividuo(Request $request){
+     
+        $urlImage = "";
+
+        $page = $request->page_id ? $request->page_id : 0; 
+
+        if (is_numeric($request->fk_individio_id) && is_numeric($request->fk_variable_id)) {
+
+            $path = 'imagenes/individuos/';
+            //dd($path);
+
+            if(Input::hasFile('individuo_imagen')){
+
+                $file = Input::file('individuo_imagen');
+                $name = "individuo-".uniqid().".".$file->getClientOriginalExtension();
+                $file->move($path, $name);
+                $urlImage = $name;
+            }
+            
+            $update = EstudioIndividuoVariable::where('fk_individio_id', $request->fk_individio_id)
+                ->where('fk_variable_id', $request->fk_variable_id)
+                ->update([
+                        'variable_valor' => $request->variable_valor,
+                        'individuo_imagen' => $urlImage,
+                        'estado' => 1
+                    ]
+                );
+
+            if ($update) {
+                
+                Session::flash('success',1);
+                Session::flash('message','Variable actualizada exitosamente');
+            
+            }else{  
+
+                Session::flash('success',2);
+                Session::flash('message','No se actualizo ningun dato!!');
+            }
+        
+        }else{
+
+            Session::flash('success',2);
+            Session::flash('message','Solo se pueden procesar datos numericos !!');
+        } 
+
+        if ($page > 0) {    
+            $page += 1;
+            return Redirect::to('estudio-galpon-variables/'.$request->fk_estudio_galpon_id.'/'.$request->fk_individio_id.'?page='.$page);
+        
+        }else{
+
+            return Redirect::to('estudio-galpon-variables/'.$request->fk_estudio_galpon_id.'/'.$request->fk_individio_id);
+        }
+    }
+
+    public function DetalleGrupoVariable($estudio, $grupo){
+
+        $grupoVariableEstudio = EstudioGrupoVariable::where('fk_estudio_id',$estudio)->where('fk_grupo_variable_id',$grupo)->first();
+        return view('parametrizacion.grupo',[
+            'grupoVariable' => $grupoVariableEstudio
+        ]);
+    }
+
+    public function ReporteEstudiosGalpon(Request $request){
+
+        //dd($request->all());
+        $Estudios = estudios::find($request->fk_estudio_id);
+        $variables = Variable::orderBy('variable_id','ASC')->get();
+
+        foreach ($variables as $variable) {
+            
+            if ($variable->operacion_resultado == 'avg') {
+                
+                //promedio
+                $RESULT = EstudioIndividuoVariable::where([
+                    'fk_variable_id' => $variable->variable_id,  
+                    'fk_estudio_galpon_id' => $request->estudio_galpon_id
+                ])
+                ->select(DB::raw('AVG(variable_valor) AS valorAVG'))
+                ->first();
+
+                //maximo esperado
+                $MaximoEsperado = $variable->variable_max;
+
+                //nivel de afectacion
+                $NivelAfectacion = EstudioIndividuoVariable::where([
+                    'fk_variable_id' => $variable->variable_id,  
+                    'fk_estudio_galpon_id' => $request->estudio_galpon_id
+                ])
+                ->where('variable_valor','<>',0)
+                ->count();
+
+                $NivelAfectacionResult = ($NivelAfectacion / $Estudios->estudio_num_animales);
+
+                if($variable->ir_operador == '<='){
+
+                    $BoolIr = ($RESULT->valorAVG <= $variable->ir_tolerancia);
+                
+                }else if($variable->ir_operador == '=>'){
+                    
+                    $BoolIr = ($RESULT->valorAVG >= $variable->ir_tolerancia);
+                }
+
+                if($BoolIr){
+
+                    $BoolIrStore = 1;  
+
+                }else{
+
+                    $BoolIrStore = 0;
+                }
+
+                // calificacion
+                if($variable->calificacion_operador == '<='){
+
+                    $Calificacion = ($RESULT->valorAVG <= $variable->calificacion_tolerancia);
+
+                }else if($variable->calificacion_operador == '>='){
+
+                    $Calificacion= ($RESULT->valorAVG >= $variable->calificacion_tolerancia);
+                }
+
+                if($Calificacion){
+
+                    $CalificacionStore = $variable->calificacion_texto_pos;  
+
+                }else{
+
+                    $CalificacionStore = $variable->calificacion_texto_neg;
+                }
+
+                $GrupoVariables = EstudioGrupoVariable::where('fk_estudio_id', $request->fk_estudio_id)
+                    ->where('fk_grupo_variable_id',1)
+                    ->first();
+
+                $ISAG = ((($RESULT->valorAVG * $NivelAfectacionResult) * $variable->index_g) / 
+                    ($GrupoVariables->GrupoVariable->constante *$Estudios->estudio_num_animales)
+                );
+            }
+            else if($variable->operacion_resultado == 'sum'){
+
+                //promedio
+                $RESULT = EstudioIndividuoVariable::where([
+                    'fk_variable_id' => $variable->variable_id,  
+                    'fk_estudio_galpon_id' => $request->estudio_galpon_id
+                ])
+                ->select(DB::raw('SUM(variable_valor) AS valorAVG'))
+                ->first();
+
+                //maximo esperado
+                $MaximoEsperado = $variable->variable_max;
+
+                //nivel de afectacion
+                $NivelAfectacion = EstudioIndividuoVariable::where([
+                    'fk_variable_id' => $variable->variable_id,  
+                    'fk_estudio_galpon_id' => $request->estudio_galpon_id
+                ])
+                ->where('variable_valor','<>',0)
+                ->count();
+
+                $NivelAfectacionResult = ($NivelAfectacion / $Estudios->estudio_num_animales);
+
+                if($variable->ir_operador == '<='){
+
+                    $BoolIr= ($RESULT->valorAVG <= ($variable->ir_tolerancia * $Estudios->estudio_num_animales));
+
+                }else if($variable->ir_operador == '>='){
+
+                    $BoolIr= ($RESULT->valorAVG >= ($variable->ir_tolerancia * $Estudios->estudio_num_animales));
+                }
+
+                if($BoolIr){
+
+                    $BoolIrStore=1;  
+
+                }else{
+
+                    $BoolIrStore=0;
+                }
+               
+                //  calificacion 
+                if($variable->calificacion_operador == '<='){
+
+                    $Calificacion= ($RESULT->valorAVG <= ($variable->calificacion_tolerancia * $Estudios->estudio_num_animales));
+
+                }else if($variable->calificacion_operador == '>='){
+
+                    $Calificacion= ($RESULT->valorAVG >= ($variable->calificacion_tolerancia * $Estudios->estudio_num_animales));
+                }
+
+                if($Calificacion){
+
+                    $CalificacionStore = $variable->calificacion_texto_pos; 
+
+                }else{
+
+                    $CalificacionStore = $variable->calificacion_texto_neg;
+                }
+
+                $ISAG = ((($RESULT->valorAVG * $NivelAfectacionResult) * $variable->index_g) / 
+                    ($GrupoVariables->GrupoVariable->constante *$Estudios->estudio_num_animales)
+                );
+            }  
+
+            $idEstudio=$request->fk_estudio_id;
+            $idGalpone=$request->fk_galpone_id;
+
+
+
+            $EstudioGalponesId=estudioGalpones::where([
+                    'fk_galpone_id'=>$idGalpone,
+                    'fk_estudio_id'=>$idEstudio
+                ])->get();
+
+
+
+           if (count($EstudioGalponesId) > 0) {
+                
+                $lote = $EstudioGalponesId[0]['estudio_galpon_lote']; 
+            
+            }else{
+
+                $lote = 0;
+            }
+
+            $lote = $EstudioGalponesId[0]['estudio_galpon_lote']; 
+
+            $IGVlist = EstudioIndividuoVariable::where('fk_estudio_galpon_id',$request->estudio_galpon_id)
+                ->where('fk_variable_id', $variable->variable_id)
+                ->first();
+
+            $create = EstudioGalponResultados::create([
+                //request
+                'fk_estudio_galpon_id' => $request->estudio_galpon_id,
+                'fk_estudio_id' => $request->fk_estudio_id,
+                'fk_animal_id' => $request->fk_animal_id,
+                //others
+                'fk_empresa_id' => $IGVlist->fk_empresa_id,
+                'fk_granja_id' => $IGVlist->fk_granja_id,
+                'fk_linea_id' => $IGVlist->fk_linea_id,
+                'fk_galpone_id' => $IGVlist->fk_galpone_id,
+                'fk_variable_id' => $variable->variable_id,
+                //results
+                'resultado' => $RESULT->valorAVG,
+                'maximo_esperado' => $MaximoEsperado,
+                'ir' => $BoolIrStore,
+                'nivel_afeccion' => $NivelAfectacion,
+                'porcentaje_afectacion' => $NivelAfectacionResult,
+                'calificacion' => $CalificacionStore,
+                'index_g' => $variable->index_g,
+                'isag' => $ISAG,
+                'lote' => $lote
+            ]);
+        }
+
+        Session::flash('message','Reporte generado exitosamente');
+        return Redirect::to('estudio-galpon-individuos/'.$request->estudio_galpon_id);
+    }
+
+    public function InformeGerencial(Request $request){
+
+        $empresas = empresa::orderBy('nombre_empresa','ASC')->pluck('nombre_empresa','empresa_id');
+        return view('estadisticas.gerencia',[
+            'empresas' => $empresas,
+        ]);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

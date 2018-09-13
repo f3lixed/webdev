@@ -1,0 +1,84 @@
+
+body{
+ text-transform: uppercase !important;
+}
+
+
+.listadoColor1{
+	border: 1px solid green;
+	background: #dff0d8;
+	border-radius: 5px;
+}
+.listadoColor2{
+	border: 1px solid green;
+	background: #dff0d8;
+	border-radius: 5px;
+	padding: 15px;
+}
+h3.titleSection{
+	margin-left: 15px !important;
+}
+
+.margin-top{
+	margin: 30px 0;
+}
+
+.margin-0{
+	margin-top: 30px;
+}
+
+#trId{
+	background: #A9F5BC;
+}
+
+#hrId{
+  	color: #58FA58;
+  	font-size: 10px;
+}
+
+#DetalleID{
+	background: #E6E6E6;
+}
+
+#mdialTamanio{
+	width: 80% !important;
+}
+
+.alert-success{
+	margin-top: 20px;
+	background-color: #dff0d8 !important;
+	color: #3c763d !important; 
+	border: 1px solid #d0e9c6 !important;
+}
+hr{
+	border-bottom: 1px solid #d8d8d8;
+	margin: 20px;
+}
+
+label.error{
+	color: red;
+}
+textarea{
+	resize: none;
+}
+
+img.mascara {
+position: absolute;
+right: 200px;
+margin: 0;
+top: 0px;
+width: 300px;
+height: 200px;
+display: none;
+}
+a:hover img.mascara {
+display: block;
+}
+
+h3.title{
+	padding-bottom: 5px;
+	border-bottom: 1px solid #BDBDBD 
+}
+p.description{
+	font-size: 17px
+}
