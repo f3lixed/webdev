@@ -23,6 +23,7 @@
         @yield('css')
         <style type="text/css">
         </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
     </head>
     <body class="hold-transition skin-green-light sidebar-mini">
         <div class="wrapper">
@@ -225,10 +226,17 @@ $(document).ready(function () {
 <!-- Bootstrap 3.3.5 -->
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
+@if (isset($calendar_details))
+{!! $calendar_details->script() !!}
+@endif
 <!-- AdminLTE App -->
 <script src="{{asset('js/app.min.js')}}"></script>
 {!!Html::script('plugins/DataTables/DataTables-1.10.12/js/jquery.dataTables.min.js')!!}
 {!!Html::script('plugins/DataTables/DataTables-1.10.12/js/dataTables.bootstrap.min.js')!!}
 @yield('scripts')
+
+
 </body>
 </html>

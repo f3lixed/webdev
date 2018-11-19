@@ -11,7 +11,7 @@ use App\parametrizacion\granja;
 Auth::routes();
 
 Route::group(['middleware' => ['web', 'auth']], function () {
-    ///  truncante 
+    ///  truncante
 
     /*
       Route::get('/truncate',function(){
@@ -78,7 +78,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
 
 
     /// fin ruta empresa
-    //  ruta test 
+    //  ruta test
 
     Route::get('/test', function() {
 
@@ -100,6 +100,11 @@ Route::group(['middleware' => ['web', 'auth']], function () {
         return response()->json($data);
     });
 
+    Route::get('diasFestivos', function() {
+
+      $data = array(array("start"=>"2018-09-24","holiday"=>"1"),array("start"=>"2014-10-14","holiday"=>"1"));
+      return response()->json($data);
+    });
 
 
     ///// fin ruta test
@@ -136,7 +141,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
     Route::get('/testdata/{id}', 'parametrizacion\empresaController@galpon');
 
 
-    // frin combo dinamico 
+    // frin combo dinamico
     ////  Rutas modulo parametrizacion   tipo Resources//
 
     Route::resource('empresa', 'parametrizacion\empresaController');
@@ -151,7 +156,7 @@ Route::group(['middleware' => ['web', 'auth']], function () {
     Route::resource('user', 'UserController');
     Route::resource('variable', 'VariableController');
     Route::resource('lineapeso', 'lineapesoController');
-    //// 
+    ////
     Route::resource('varialesgrupos', 'VariablesGruposVarialesController');
     Route::resource('gruposVariables', 'GrupoVariablesController');
 
@@ -243,4 +248,6 @@ Route::group(['middleware' => ['web', 'auth']], function () {
     //////nuevos
     Route::post('estudio/update', ['as' => 'estudio/update', 'uses' => 'Estudios\EstudiosController@UpdateEstudioGalpon']);
     Route::get('estudio/delete/{id}', ['as' => 'estudio/delete', 'uses' => 'Estudios\EstudiosController@DeleteEstudioGalpon']);
+    Route::get('events', 'EventController@index')->name('events.index');
+    Route::post('events', 'EventController@addEvent')->name('events.add');
 });

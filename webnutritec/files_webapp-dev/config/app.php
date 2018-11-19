@@ -181,6 +181,7 @@ return [
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         'Maatwebsite\Excel\ExcelServiceProvider',
+        MaddHatter\LaravelFullcalendar\ServiceProvider::class,
     ],
 
     /*
@@ -234,6 +235,7 @@ return [
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'Image' => 'Intervention\Image\Facades\Image',
         'Excel' => 'Maatwebsite\Excel\Facades\Excel',
+        'Calendar' => MaddHatter\LaravelFullcalendar\Facades\Calendar::class,
     ],
 
 ];

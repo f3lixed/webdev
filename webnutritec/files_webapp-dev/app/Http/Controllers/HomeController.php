@@ -22,7 +22,11 @@ use Session;
 //includes
 use App\parametrizacion\empresa;
 use App\parametrizacion\granja;
+use Auth;
+use Validator;
+use App\Event;
 
+use Calendar;
 class HomeController extends Controller {
 
     function AutoGranja(Request $request, $id) {
@@ -75,9 +79,23 @@ class HomeController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
+      $events = Event::get();
+    	$event_list = [];
+    	foreach ($events as $key => $event) {
+    		$event_list[] = Calendar::event(
+                $event->event_name,
+                true,
+                new \DateTime($event->start_date),
+                new \DateTime($event->end_date.' +1 day')
+            );
+    	}
+      // $eloquentEvent = Event::first(); //EventModel implements MaddHatter\LaravelFullcalendar\Event
+    	$calendar_details = Calendar::addEvents($event_list)->setCallbacks([ //set fullcalendar callback options (will not be JSON encoded)
+          'viewRender' => 'festivosRender'
+        ]);
 
+        return view('home', compact('calendar_details') );
 
-        return view('home');
     }
 
     public function Estadisticas($galpon, $estudio, $animal) {
